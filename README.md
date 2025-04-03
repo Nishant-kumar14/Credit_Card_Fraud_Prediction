@@ -13,7 +13,7 @@ This project is a **Credit Card Fraud Detection System** built using **Flask, Ma
 - **Python** (Flask, NumPy, Pandas, Scikit-learn)
 - **Machine Learning** (Logistic Regression, Decision Trees, etc.)
 - **MongoDB** (Database for storing transactions)
-- **HTML, CSS, JavaScript** (Frontend UI)
+- **HTML, CSS** (Frontend UI)
 - **Joblib** (Model saving/loading)
 
 ## 📁 Project Structure
