@@ -1,5 +1,7 @@
 # Credit Card Fraud Detection
 
+![image](https://github.com/user-attachments/assets/41305954-5885-4a2c-a53a-a8361d541448)
+
 ## 📌 Project Overview
 This project is a **Credit Card Fraud Detection System** built using **Flask, Machine Learning, and MongoDB**. It predicts whether a transaction is fraudulent or safe based on user input. The model is trained on transaction data and deployed as a web application.
 
@@ -72,7 +74,10 @@ credit_card_fraud_detection/
 ## 📷 Screenshots
 | Home Page | Prediction Result |
 |-----------|------------------|
-| ![Home Page](static/home_screenshot.png) | ![Prediction](static/prediction_screenshot.png) |
+| ![Screenshot 2025-04-03 215224](https://github.com/user-attachments/assets/b2aa36b9-efed-4ea3-a0c9-ee03ece5f05a) | Predict |
+| ![Screenshot 2025-04-03 215318](https://github.com/user-attachments/assets/58d6b58d-352a-4d0e-bb54-7fec051452a1) | Fraud |
+| ![Screenshot 2025-04-03 215621](https://github.com/user-attachments/assets/011a0962-8fa9-492f-ae65-31381279f692) | Safe |
+
 
 ## 🤝 Contributing
 Pull requests are welcome! If you'd like to contribute, please fork the repository and submit a PR.
