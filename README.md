@@ -86,5 +86,5 @@ Pull requests are welcome! If you'd like to contribute, please fork the reposito
 This project is open-source and available under the **MIT License**.
 
 ---
-🔗 **Connect with me:** [GitHub]((https://github.com/Nishant-kumar14) | [LinkedIn](www.linkedin.com/in/nishant-kumar-b55951285)
+🔗 **Connect with me:** [GitHub](https://github.com/Nishant-kumar14) | [LinkedIn](https://www.linkedin.com/in/nishant-kumar-b55951285/)
 
