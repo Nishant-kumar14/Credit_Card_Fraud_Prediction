@@ -12,7 +12,7 @@ label_encoders = joblib.load("Label_encoders.pkl")
 scaler = joblib.load("scaler_transform.pkl")
 
 # Connect to MongoDB using your connection URL
-MONGO_URI = "mongodb+srv://nishant23102003:Nishant12@nishant777.twv6d.mongodb.net/?retryWrites=true&w=majority&appName=Nishant777"  # Replace this with your MongoDB URL
+MONGO_URI = "mongodb+srv://nishant23102003:Nishant12@nishant777.twv6d.mongodb.net/?retryWrites=true&w=majority&appName=Nishant777&tls=true&tlsAllowInvalidCertificates=true"  # Replace this with your MongoDB URL
 client = pymongo.MongoClient(MONGO_URI)
 db = client["Credit_Card"]  # Database name
 collection = db["Prediction"]  # Collection name
