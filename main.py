@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request
 import joblib
 import numpy as np
-from pymongo import MongoClient
-import certifi
+import pymongo
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -11,11 +11,11 @@ model = joblib.load("Credit_Card_fraud_model.pkl")
 label_encoders = joblib.load("Label_encoders.pkl")
 scaler = joblib.load("scaler_transform.pkl")
 
-# Connect to MongoDB
-MONGO_URI = "mongodb+srv://user123:<Nishant12>@nishant1.lgiw2.mongodb.net/?retryWrites=true&w=majority&appName=Nishant1"
-client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
-db = client["credit_fraud"]  # Database name
-collection = db["fraud_transactions"]  # Collection name
+# Connect to MongoDB using your connection URL
+MONGO_URI = "mongodb+srv://nishant23102003:Nishant12@nishant777.twv6d.mongodb.net/?retryWrites=true&w=majority&appName=Nishant777"  # Replace this with your MongoDB URL
+client = pymongo.MongoClient(MONGO_URI)
+db = client["Credit_Card"]  # Database name
+collection = db["Prediction"]  # Collection name
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -56,6 +56,7 @@ def index():
 
             # Store transaction details in MongoDB
             transaction_record = {
+                "timestamp": datetime.now(),
                 "merchant": merchant,
                 "category": category,
                 "amount": amt,
@@ -66,10 +67,19 @@ def index():
                 "day_of_week": day_of_week,
                 "transaction_month": transaction_month,
                 "age": age,
-                "prediction": prediction
+                "prediction": prediction,
+                "encoded_values": {
+                    "merchant_enc": int(merchant_enc),
+                    "category_enc": int(category_enc),
+                    "gender_enc": int(gender_enc),
+                    "state_enc": int(state_enc),
+                    "job_enc": int(job_enc),
+                    "day_of_week_enc": int(day_of_week_enc)
+                }
             }
-            collection.insert_one(transaction_record)
 
+            collection.insert_one(transaction_record)  # Insert into MongoDB
+        
         except Exception as e:
             prediction = f"Error: {str(e)}"
 
